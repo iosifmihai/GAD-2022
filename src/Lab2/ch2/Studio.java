@@ -1,13 +1,16 @@
 package Lab2.ch2;
 
+import java.util.Arrays;
+
 public class Studio {
-    private String nume;
-    private Film[] filme;
+    public String nume;
+    public Film[] filme;
     public Studio(String nume, Film[] filme)
     {
         this.nume=nume;
         this.filme=filme;
     }
+
 
     public String getNume() {
         return nume;
@@ -15,5 +18,10 @@ public class Studio {
 
     public Film[] getFilme() {
         return filme;
+    }
+
+    @Override
+    public String toString() {
+        return nume;
     }
 }
