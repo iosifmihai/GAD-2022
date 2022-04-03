@@ -1,7 +1,7 @@
 package Lab2.ch2;
 
 import java.util.Arrays;
-
+import Lab2.ch2.Actor;
 public class Film {
     public String nume;
     public int anAparitie;
@@ -22,6 +22,8 @@ public class Film {
                 ", actori=" + Arrays.toString(actori) +
                 '}';
     }
+
+
 
     public String getNume() {
         return nume;
