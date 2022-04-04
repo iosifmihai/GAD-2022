@@ -8,7 +8,7 @@ public class Main {
         Premiu oscar2010 = new Premiu("oscar", 2010);
         Premiu oscar2018 = new Premiu("oscar", 2018);
 
-        Actor actorOscar1990 = new Actor("actor cu 2 oscarurui", 35, new Premiu[]{oscar1990, oscar2000});
+        Actor actorOscar1990 = new Actor("actor cu 2 oscaruri", 35, new Premiu[]{oscar1990, oscar2000});
         Actor actorOscar2010 = new Actor("actor cu oscar din 2000", 55, new Premiu[]{oscar2010});
         Actor actorOscar2018 = new Actor("actor cu oscar din 2018", 23, new Premiu[]{oscar2018});
         Actor actorFaraPremii01 = new Actor("actor fara oscar 01", 33, new Premiu[]{});
@@ -29,8 +29,13 @@ public class Main {
         Studio[] studioDatabase = new Studio[]{studio1, studio2};
 
         for (int i = 0; i < studioDatabase.length; i++) {
-            if (studioDatabase[i].filme.length > 1) {
-                System.out.println("Studio cu mai mult de 2 oscaruri : " + studioDatabase[i]);
+            if (studioDatabase[i].getFilme().length > 2) {
+                System.out.println(studioDatabase[i].getNume());
+            }
+
+            if(studioDatabase[i].filmByActors("actor cu 2 oscaruri")!=null)
+            {
+                System.out.println(studioDatabase[i].getNume());
             }
 
 

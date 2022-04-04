@@ -14,6 +14,8 @@ public class Film {
         this.actori=actori;
     }
 
+
+
     @Override
     public String toString() {
         return "Film{" +
@@ -24,6 +26,18 @@ public class Film {
     }
 
 
+    public Actor getActorByName(String actor)
+    {
+        for(int i=0;i< actori.length;i++)
+        {
+            if(actori[i].getNume().equals(actor))
+            {
+                return actori[i];
+            }
+
+        }
+        return null;
+    }
 
     public String getNume() {
         return nume;
